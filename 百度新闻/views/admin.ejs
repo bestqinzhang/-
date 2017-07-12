@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>百度新闻</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/dist/css/normalize.css" rel="stylesheet">
+    <link href="stylesheets/admin.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div class="box-best">
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <h1>百度新闻后台管理器</h1>
+      </div>
+    </nav>
+    <div class="container container-style">
+      <div class="row">
+        <div class="col-md-6 news-left">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+               <h3 class="panel-title">新闻发布器</h3>
+            </div>
+            <div class="panel-body">
+               <form>
+                  <div class="form-group">
+                    <label for="news_title">新闻标题</label>
+                    <input type="text" class="form-control" name="news_title" placeholder="请输入新闻标题" id='title_val'>
+                  </div>
+                  <div class="form-group">
+                    <label for="news_content">新闻正文</label>
+                    <textarea class="form-control" name="news_content" id='textarea_val'></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="news_address">新闻图片地址</label>
+                    <input type="text" class="form-control" name="news_address" placeholder="请输入新闻图片地址" id='address_val'>
+                  </div>
+                  <div class="form-group">
+                    <label for="news_src">新闻来源</label>
+                    <input type="text" class="form-control" name="news_src" placeholder="请输入新闻来源" id='src_val'>
+                  </div>
+                    <div class="form-group">
+                    <label for="news_time">新闻日期</label>
+                    <input type="date" class="form-control" name="news_time" id='time_val'>
+                  </div>
+                  <div class="form-group">
+                    <label for="news_type">新闻标签</label>
+                    <select class="form-control" name="news_type" id='type_val'>
+                      <option>推荐</option>
+                      <option>百家</option>
+                      <option>本地</option>
+                      <option>娱乐</option>
+                      <option>社会</option>
+                      <option>军事</option>
+                      <option>女人</option>
+                      <option>搞笑</option>
+                      <option>互联网</option>
+                      <option>科技</option>
+                    </select>
+                  </div>
+                  <input class="btn btn-default addNew" type="button" value="提交">
+               </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 news-right">
+          <div class="panel panel-default box-d">
+            <div class="panel-heading">
+              <h3 class="panel-title">新闻列表</h3>
+            </div>
+            <div class="panel-body">
+             <table class="table table-hover">
+               <thead>
+                <tr>
+                  <th>新闻编号</th>
+                  <th>新闻标题</th>
+                  <th>新闻时间</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- 模态框 -->
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="myModal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+             <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">确认要删除这条新闻么</h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+          <button type="button" class="btn btn-danger delete" data-dismiss="modal">确认</button>
+        </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="jquery/dist/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/dist/js/bootstrap.js"></script>
+    <script src="javascripts/adminajax.js"></script>
+
+
+  </body>
+</html>
